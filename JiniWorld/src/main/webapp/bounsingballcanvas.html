@@ -4,10 +4,10 @@
 	<title>My World</title>
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<script type="text/javascript" charset="utf-8" src="js/jquery-latest.js"></script>
-	<link type="text/css" rel="stylesheet" href="css/loginstyle.css" /> 
     <script type="text/javascript" src="js/equalcolumns.js"></script>
     <script type="text/javascript" src="js/bwH5LS.js"></script>
-    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/checkuser.js"></script>
+    <script type="text/javascript" src="js/bounsingballcanvas.js"></script>
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
@@ -17,42 +17,29 @@
 	</header>
 	<nav>
 		<ul>
-			<li class="selected"><a href="login.html">Login</a></li>
+			<li class="selected"><a href="home.html">Home</a></li>
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
+			<li class="selected"><a href="login.html?reset=true">Logout</a></li>
 		</ul>
 	</nav>
 	<section id="intro">
 		<header>
-			<h2>Even Impossible Says I'm possible :D</h2>
+			<h2></h2>
 		</header>
-		<p></p>
+		<p>Even Impossible Says I'm Possible :D</p>
 		<img src="images/introimage.png" alt="lime" />
 	</section>
 	
 	<div id="innercontent">
-    <article>
-		 <div id="main">
-                <form id="newuserForm" method="post" action="#" onsubmit="return false;">
-                    <fieldset>
-                    	<label for="userid">UserID </label>
-		               		<input type="text" name="userid" id="userid" placeholder="Insert your User ID" required autofocus>
-                        <label for="username">Name <span class="ico"><img src="images/user.png" alt="Username Icon" border="0" /></span></label>
-		               		<input type="text" name="username" id="username" placeholder="Insert your Name" required>
-                       <label for="password">Password <span class="ico"><img src="images/pass.png" alt="Password Icon" border="0" /></span></label>
-	        	            <input type="password" name="password" id="password" placeholder="Insert your Password" required>
-	        	       <label for="emailid">EmailID </label>
-		               		<input type="email" name="emailid" id="emailid" placeholder="Insert your Email ID">
-            		</fieldset>
-                    <fieldset>
-                    	<button type=submit onclick="createNewUser()">>>&nbsp;&nbsp;GO</button>
-                    </fieldset>
-           		</form>
-    	</div>
-    </article>
+		 <p id="status">Bounsing Ball Using Canvas API</p>
+		 <canvas width="500" height="250" id="canvas">
+			Your browser doesn't support the HTML5 Canvas element !
+		 </canvas>
 	</div>
+		
 		<aside>
 			<section>
 				<header>
@@ -85,7 +72,6 @@
 					<li><a href="#">Twitter</a></li>
 					<li><a href="#">Facebook</a></li>
 					<li><a href="#">Google Buzz</a></li>
-					
 				</ul>
 			</section>
 
@@ -105,13 +91,13 @@
     <section>
     <h3>Left Stuff</h3>
     <p></p>
-    <p>Next line here</p>
+    <p></p>
     </section>
     
     <section>
     <h3>Center Stuff</h3>
     <p></p>
-    <p>Next line here</p>
+    <p></p>
     </section>
     
     <section>
@@ -122,4 +108,6 @@
 
 	</footer>
 </body>
+<footer>
+</footer>
 </html>
