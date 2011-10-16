@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="styles.css">
+  <head>
+  	<title>Video Timeline</title>
+  </head>
+  
+  <video id="movies" autoplay oncanplay="startVideo()" onended="stopTimeline()" autobuffer="true"
+    width="400px" height="300px">
+    <source src="./video/Intermission-Walk-in.ogv" type='video/ogg; codecs="theora, vorbis"'>
+    <source src="./video/Intermission-Walk-in_512kb.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+  </video>
+
+  <canvas id="timeline" width="400px" height="300px">
+  
+  <footer>
+    	<script type="text/javascript" src="js/videotimeline.js"></script>
+  </footer>
+
+</html>
+

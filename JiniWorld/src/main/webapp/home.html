@@ -27,7 +27,7 @@
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
-			<li class="selected"><a href="login.html?reset=true">Logout</a></li>
+			<li class="selected"><a href="login.html?reset=true">Logout<script type="text/javascript">printUserName();</script></a></li>
 		</ul>
 	</nav>
 	<section id="intro">
@@ -57,7 +57,7 @@
 							<div class="form-area">
                               <form id="tasks-form">
                                 <label for="task">Add a task here and hit enter</label>
-                                <input id="task" autofocus>
+                                <input id="task">
                               </form>
                             </div>
                             <ul id="tasks"></ul> 
@@ -81,7 +81,7 @@
                               </header>
                               <article>
                               <p class="welcome">
-								Welcome, &nbsp;<label id="userNameDisp"><script type="text/javascript">document.write(userNameDisplay)</script></label>			
+								Welcome, &nbsp;<label id="userNameDisp"><script type="text/javascript">printUserName();</script></label>			
 							  </p>
 							  <br/>
 							  <div id="chatbox">

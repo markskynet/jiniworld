@@ -17,7 +17,7 @@
 	</header>
 	<nav>
 		<ul>
-			<li class="selected"><a href="#">Jini</a></li>
+			<li class="selected"><a href="login.html">Login</a></li>
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
@@ -35,7 +35,7 @@
 	<div id="innercontent">
     <article>
 		 <div id="main">
-                <form id="loginForm" method="post" action="#" >
+                <form id="loginForm" method="post" action="#"  onsubmit="return false;">
                     <fieldset>
                         <label for="username">Username <span class="ico"><img src="images/user.png" alt="Username Icon" border="0" /></span></label>
 		               		<input type="text" name="username" id="username" required autofocus>
@@ -44,7 +44,7 @@
             		</fieldset>
                     <fieldset>
                         <span class="password"><a href="newuser.html">New User?</a></span>
-                    	<button type=button onclick="checkUser()">>>&nbsp;&nbsp;GO</button>
+                    	<button type="submit" onclick="checkUser()">>>&nbsp;&nbsp;GO</button>
                     </fieldset>
            		</form>
     	</div>
