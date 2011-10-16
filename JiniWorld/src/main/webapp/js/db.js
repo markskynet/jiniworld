@@ -38,11 +38,11 @@
         }
 
         // How many rows do we have?
-        function countRows() {
+        function countRows(userid) {
         	var c;
             if(!db) return;
             db.readTransaction(function (t) {
-                t.executeSql('SELECT COUNT(*) AS c FROM tLogin', [], function (t, r) {
+                t.executeSql('SELECT COUNT(*) AS c FROM tLogin WHERE userid = ?', [userid], function(t, r) {
                     c = r.rows.item(0).c;
                 }, function(t, e) {
                     alert('countRows: ' + c);
@@ -57,29 +57,37 @@
             var password = f.elements['password'].value;
             var emailid = f.elements['emailid'].value;
 
-            if(! (userid || username || password)) return;
+            if(!userid) return;
+            if(!username) return; 
+            if(!password) return;
+            
+            
             db.transaction( function(t) {
                 t.executeSql('INSERT INTO tLogin ( userid, password, username, emailid ) VALUES ( ?, ?, ?, ? ) ',
                     [ userid, password, username, emailid ]
                 );
             }, function(t, e){
-            		alert('Insert row: '+t.message); 
+            		//alert('Message: '+t.message);
+            		if(t.message == "constraint failed")
+            			alert("User already Exist."); 
             	}, 
             	function(t, e) {
-            		alert('test');
+            		alert('New User Created. Please Login.');
+            		redirectURL("newuser","login");
             });
         }
         
         function checkUser() {
 
- //           countRows();    // update the row count each time the display is refreshed
-
-            var userID = element('username').value;
+            var userid = element('username').value;
             var password = element('password').value;
+            
+            if(!userid) return; 
+            if(!password) return;
             
             if(db) {
                 db.readTransaction(function(t) {    // readTransaction sets the database to read-only
-                    t.executeSql('SELECT * FROM tLogin WHERE userid = ?', [userID], function(t, r) {
+                    t.executeSql('SELECT * FROM tLogin WHERE userid = ?', [userid], function(t, r) {
                     	var rowlength = r.rows.length;
                         if(rowlength == 1) {
                         	var row = r.rows.item(0);
@@ -88,7 +96,7 @@
                         		var dbusername = row.username;
 
                                 sesStorage.setItem('userName',dbusername);
-                            	window.location = getRedirectURL("login","home");	
+                            	redirectURL("login","home");	
                         	}else{
                             	// user not available
                         		alert('Invalid Password');

@@ -13,7 +13,7 @@ function isValidUserSession(){
     if(userName == null){
     	sesStorage.setItem('message','Welcome to Jini World. Please Login.');
     	var pagename = getPageName();
-    	window.location = getRedirectURL(pagename,"login");
+    	redirectURL(pagename,"login");
     }
 }
 

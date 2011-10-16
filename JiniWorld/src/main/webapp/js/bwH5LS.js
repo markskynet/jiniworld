@@ -1,9 +1,18 @@
 
 var _bwH5LS_version = "1.0.2";
 
+
 // useful for finding elements
 var element = function(id) { return document.getElementById(id); }
 var errorMessage = undefined;
+
+function printUserName(){
+	write(' '+userNameDisplay);
+}
+
+function write(txt){
+	document.write(txt);
+}
 
 function getParameterByName(name)
 {
@@ -25,7 +34,7 @@ function displayError(eMessage){
     }
 }
 
-function getRedirectURL(source, dest){
+function redirectURL(source, dest){
 	var location = window.location;
 	var host = location.host;
 	var protocol = location.protocol;
@@ -35,7 +44,7 @@ function getRedirectURL(source, dest){
 		newpathname = newpathname+dest+".html";
 	}
 	var loc = protocol + "//"+host+newpathname;
-	return loc;
+	window.location = loc;
 }
 
 function getPageName(){
