@@ -1,5 +1,5 @@
-	var ws;
 
+	var ws;
 	$(document).ready(
 			function() {
 				ws = new WebSocket("ws://localhost:8080/JiniWorld/WebSocketChat/anything");
@@ -20,7 +20,16 @@
 			});
 
 	function sendMessage() {
-		var message = $('#username').val() + ":" + $('#message').val();
+		//var message = $('#userNameDisp').val() + ":" + $('#message').val();
+		var message = getUserName() + ":" + $('#message').val();
 		ws.send(message);
 		$('#message').val('');
+	}
+	
+	function sendMessageOnEnter(){
+		$("#message").keyup(function(event){
+		  if(event.keyCode == 13){
+		    $("#messagebtn").click();
+		  }
+		});
 	}

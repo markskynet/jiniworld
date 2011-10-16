@@ -34,14 +34,14 @@ a:hover { text-decoration:underline; }
 	margin-bottom:25px;
 	padding:10px;
 	background:#fff;
-	height:270px;
-	width:430px;
+	height:140px;
+	width:160px;
 	border:1px solid #ACD8F0;
 	overflow:auto; 
 }
 
 #usermsg {
-	width:395px;
+	width:60px;
 	border:1px solid #ACD8F0; 
 }
 

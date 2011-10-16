@@ -10,6 +10,8 @@
 
         function initDB(){
             sesStorage = getSessionStorage() || displayError('Session Storage not supported.');
+            var resetSession = getParameterByName('reset');
+            if(resetSession !=null && resetSession == "true") sesStorage.removeItem("userName");
         	var msg = sesStorage.getItem('message');
         	if(msg != null){
         		alert(msg);

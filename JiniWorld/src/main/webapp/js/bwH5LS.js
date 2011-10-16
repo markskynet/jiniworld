@@ -5,6 +5,18 @@ var _bwH5LS_version = "1.0.2";
 var element = function(id) { return document.getElementById(id); }
 var errorMessage = undefined;
 
+function getParameterByName(name)
+{
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regexS = "[\\?&]" + name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.href);
+  if(results == null)
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 function displayError(eMessage){
 	if(errorMessage) {
 		dispError(eMessage)
@@ -19,6 +31,9 @@ function getRedirectURL(source, dest){
 	var protocol = location.protocol;
 	var pathname = location.pathname;
 	var newpathname = pathname.replace(source ,dest);
+	if(newpathname.indexOf(".html") == -1){
+		newpathname = newpathname+dest+".html";
+	}
 	var loc = protocol + "//"+host+newpathname;
 	return loc;
 }

@@ -1,8 +1,13 @@
 
+var userNameDisplay;
+var sesStorage = getSessionStorage() || displayError('Session Storage not supported.');
+
 var validUserSession = isValidUserSession();
+
 function isValidUserSession(){
-	
-    var sesStorage = getSessionStorage() || displayError('Session Storage not supported.');
+
+	userNameDisplay = getUserName();
+ 
     var userName = sesStorage.getItem('userName');
     
     if(userName == null){
@@ -12,4 +17,9 @@ function isValidUserSession(){
     }
 }
 
+
+function getUserName()
+{
+	return sesStorage.getItem("userName");
+}
 
