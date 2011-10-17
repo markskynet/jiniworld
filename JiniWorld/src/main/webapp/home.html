@@ -12,14 +12,14 @@
 	<script type="text/javascript" src="js/todo.js"></script>
 	<script type="text/javascript" src="js/checkuser.js"></script>
 	<script type="text/javascript" src="js/chat.js"></script>
-	
-	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>[endif]-->
 </head>
+
 <body>
 
 	<header>
 		<h1>My World</h1>
 	</header>
+	
 	<nav>
 		<ul>
 			<li class="selected"><a href="home.html">Home</a></li>
@@ -30,6 +30,7 @@
 			<li class="selected"><a href="login.html?reset=true">Logout<script type="text/javascript">printUserName();</script></a></li>
 		</ul>
 	</nav>
+	
 	<section id="intro">
 		<header>
 			<h2>Even Impossible Says I'm Possible :D</h2>
@@ -39,101 +40,107 @@
 	</section>
 	
 	<section id="content">
-				<ul class="column">
-				    <!--eqblock-->
-				    <li>
-				        <section class="block">
-								<a href="#"><img src="images/hghjbkj.jpg" alt=""  /></a> 
-								<h2><a href="geo.html">Where Am I???</a></h2> 
-								<p>Get to know where you are by using the geolocation application. </p> 
-				        </section>
-				    </li>
+			<ul class="column">
+		    <!--eqblock-->
+		    <li>
+		        <section class="block">
+						<a href="#"><img src="images/hghjbkj.jpg" alt=""  /></a> 
+						<h2><a href="geo.html">Where Am I???</a></h2> 
+						<p>Get to know where you are by using the geolocation application. </p> 
+		        </section>
+		    </li>
 
-				    <!--eqblock-->
-				    <li>
-				        <section class="block">
-						<a href="#"><img src="images/fsdf.jpg" alt=""  /></a>
-						<p> What must I do. </p> 
-							<div class="form-area">
-                              <form id="tasks-form">
-                                <label for="task">Add a task here and hit enter</label>
-                                <input id="task">
-                              </form>
-                            </div>
-                            <ul id="tasks"></ul> 
-				        </section>
-				    </li>
+		    <!--eqblock-->
+		    <li>
+		        <section class="block">
+				<a href="#"><img src="images/fsdf.jpg" alt=""  /></a>
+				<p> What must I do. </p> 
+					<div class="form-area">
+                            <form id="tasks-form">
+                              <label for="task">Add a task here and hit enter</label>
+                              <input id="task">
+                            </form>
+                          </div>
+                          <ul id="tasks"></ul> 
+		        </section>
+		    </li>
 
-				    <!--eqblock-->
-				    <li>
-				        <section class="block">
-									<a href="#"><img src="images/hai.jpg" alt=""  /></a> 
-										<h2><a href="file-api.html">Photo Gallery</a></h2> 
-										<p>View the desired image from your local disk without using a server.</p> 
-				        </section>
-				    </li>
-
-				    <!--eqblock-->
-				    <li>
-				        <section class="block">
- 							<header>
-                              <h1>Chat</h1>
-                              </header>
-                              <article>
-                              <p class="welcome">
-								Welcome, &nbsp;<label id="userNameDisp"><script type="text/javascript">printUserName();</script></label>			
-							  </p>
-								
-							  <div id="chatbox" class="chatblock">
-								<textarea id="messages" rows="8" cols="17" readonly="readonly"></textarea>
-							  </div>
-								<form name="message" action="" onsubmit="return false;">
-									<input name="usermsg" type="text" id="message" size="23" onkeydown="if (event.keyCode == 13) document.getElementById('messagebtn').click();"/> 
-									<input type="button" name="submitmsg" id="messagebtn" value="Send..." onclick="sendMessage();" />
-								</form>
-                              </article>										 
-				        </section>
-				    </li>
-				    <li>
-				        <section class="block">
+		    <!--eqblock-->
+		    <li>
+		        <section class="block">
 							<a href="#"><img src="images/hai.jpg" alt=""  /></a> 
-								<h2><a href="videotimeline.html">Video Timeline</a></h2> 
-								<p>VideoTime Line using HTML5.</p> 
-				        </section>
-				    </li>
-				    <li>
-				        <section class="block">
-							<a href="#"><img src="images/hai.jpg" alt=""  /></a> 
-								<h2><a href="bounsingballcanvas.html">Bounsing Ball</a></h2> 
-								<p>Bounsing Ball using HTML5 Canvas API.</p> 
-				        </section>
-				    </li>
-		</section>
+								<h2><a href="file-api.html">Photo Gallery</a></h2> 
+								<p>View the desired image from your local disk without using a server.</p> 
+		        </section>
+		    </li>
+
+		    <!--eqblock-->
+		    <li>
+		        <section class="block">
+				   	  <header>
+                          <h1>Chat</h1>
+                      </header>
+                      <article>
+                          <p class="welcome">
+							Welcome, &nbsp;<label id="userNameDisp"><script type="text/javascript">printUserName();</script></label>			
+			  			  </p>
+				
+						  <div id="chatbox" class="chatblock">
+							<textarea id="messages" rows="8" cols="17" readonly="readonly"></textarea>
+						  </div>
+						  <form name="message" action="" onsubmit="return false;" class="chattextblock">
+							<input name="usermsg" type="text" id="message" size="18" onkeydown="if (event.keyCode == 13) document.getElementById('messagebtn').click();"/> 
+							<input type="button" name="submitmsg" id="messagebtn" size="4" value="Go" onclick="sendMessage();" />
+						  </form>
+                       </article>										 
+		        </section>
+		    </li>
+		    <li>
+		        <section class="block">
+					<a href="#"><img src="images/hai.jpg" alt=""  /></a> 
+						<h2><a href="videotimeline.html">Video Timeline</a></h2> 
+						<p>VideoTime Line using HTML5.</p> 
+		        </section>
+		    </li>
+		    <li>
+		        <section class="block">
+					<a href="#"><img src="images/hai.jpg" alt=""  /></a> 
+						<h2><a href="bounsingballcanvas.html">Bounsing Ball</a></h2> 
+						<p>Bounsing Ball using HTML5 Canvas API.</p> 
+		        </section>
+		    </li>
+		    <li>
+		        <section class="block">
+					<a href="#"><img src="images/hai.jpg" alt=""  /></a> 
+						<h2><a href="guessgame.html">Letter Guess Game</a></h2> 
+						<p>Letter Guess Game.</p> 
+		        </section>
+		    </li>
+	</section>
 		
 	<footer>
-    <section>
-    <h3>Left Stuff</h3>
-    <p></p>
-    <p></p>
-    </section>
-    
-    <section>
-    <h3>Center Stuff</h3>
-    <p></p>
-    <p></p>
-    </section>
-    
-    <section>
-    <h3>Right Stuff</h3>
-    <p></p>
-    <p></p>
-    </section>
-
+	    <section>
+		    <h3>Left Stuff</h3>
+		    <p></p>
+		    <p>Next line here</p>
+	    </section>
+	    
+	    <section>
+		    <h3>Center Stuff</h3>
+		    <p></p>
+		    <p>Next line here</p>
+	    </section>
+	    
+	    <section>
+		    <h3>Right Stuff</h3>
+		    <p></p>
+		    <p></p>
+	    </section>
 	</footer>
 </body>
 <footer>
-		<script type="text/javascript" src="js/renderer2.js"></script>
-		<script type="text/javascript" src="js/data.js"></script>
-		<script type="text/javascript" src="js/spinningglobe.js"></script>
+	<script type="text/javascript" src="js/renderer2.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/spinningglobe.js"></script>
 </footer>
 </html>

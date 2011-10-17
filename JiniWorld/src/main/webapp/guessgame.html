@@ -4,53 +4,46 @@
 	<title>My World</title>
 	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
 	<script type="text/javascript" charset="utf-8" src="js/jquery-latest.js"></script>
-	<link type="text/css" rel="stylesheet" href="css/loginstyle.css" /> 
+	<script src="js/modernizr-1.6.min.js"></script>
+	<script src="js/debugger.js"></script>
     <script type="text/javascript" src="js/equalcolumns.js"></script>
     <script type="text/javascript" src="js/bwH5LS.js"></script>
-    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/checkuser.js"></script>
+    <script src="js/guessgame.js"></script>
 </head>
 <body>
 
 	<header>
 		<h1>My World</h1>
 	</header>
-	
 	<nav>
 		<ul>
-			<li class="selected"><a href="login.html">Login</a></li>
+			<li class="selected"><a href="home.html">Home</a></li>
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
 			<li><a href="#"></a></li>
+			<li class="selected"><a href="login.html?reset=true">Logout<script type="text/javascript">printUserName();</script></a></li>
 		</ul>
 	</nav>
-	
 	<section id="intro">
 		<header>
-			<h2>Even Impossible Says I'm possible :D</h2>
+			<h2>Even Impossible Says I'm Possible :D</h2>
 		</header>
 		<p></p>
 		<canvas id="map" ></canvas>
 	</section>
 	
 	<div id="innercontent">
-	    <article>
-			 <div id="main">
-	                <form id="loginForm" method="post" action="#"  onsubmit="return false;">
-	                    <fieldset>
-	                        <label for="username">Username <span class="ico"><img src="images/user.png" alt="Username Icon" border="0" /></span></label>
-			               		<input type="text" name="username" id="username" required autofocus>
-	                       <label for="password">Password <span class="ico"><img src="images/pass.png" alt="Password Icon" border="0" /></span></label>
-		        	            <input type="password" name="password" id="password" required>
-	            		</fieldset>
-	                    <fieldset>
-	                        <span class="password"><a href="newuser.html">New User?</a></span>
-	                    	<button type="submit" onclick="checkUser()">>>&nbsp;&nbsp;GO</button>
-	                    </fieldset>
-	           		</form>
-	    	</div>
-	    </article>
+		<canvas id="canvasOne" width="500" height="300">
+			Your browser does not support HTML 5 Canvas. 
+		</canvas>
+		<form>
+			<input type="button" id="newGame" value="Start Game">
+			<input type="button" id="createImageData" value="Export Canvas Image">
+		</form>
 	</div>
+		
 	<aside>
 		<section>
 			<header>
@@ -87,8 +80,8 @@
 	</footer>
 </body>
 <footer>
-	<script type="text/javascript" src="js/renderer2.js"></script>
+    <script type="text/javascript" src="js/renderer2.js"></script>
 	<script type="text/javascript" src="js/data.js"></script>
-	<script type="text/javascript" src="js/spinningglobe.js"></script>
+	<script type="text/javascript" src="js/spinningglobe.js"></script>  
 </footer>
 </html>
