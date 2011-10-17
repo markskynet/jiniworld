@@ -33,10 +33,10 @@ a:hover { text-decoration:underline; }
 	margin:0 auto;
 	margin-bottom:25px;
 	padding:10px;
-	background:#fff;
+	/*background:#fff;*/
 	height:140px;
 	width:160px;
-	border:1px solid #ACD8F0;
+	/*border:1px solid #ACD8F0;*/
 	overflow:auto; 
 }
 

@@ -178,6 +178,18 @@ nav ul li.subscribe a {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	}
+	
+#intro canvas {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 250px;
+	height: 100%;
+	
+	/* curved border radius */
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	}
 
 /* content and sidebar layout */
 
@@ -214,6 +226,17 @@ nav ul li.subscribe a {
 
 #content .block {
 	height: 355px;
+	font-size: 1em;
+	margin-right: 10px; /*Creates the 10px gap between each column*/
+	padding: 20px;
+	background: #d6a965;
+/* curved border radius */
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+ .chatblock {
+	height: 140px;
 	font-size: 1em;
 	margin-right: 10px; /*Creates the 10px gap between each column*/
 	padding: 20px;
