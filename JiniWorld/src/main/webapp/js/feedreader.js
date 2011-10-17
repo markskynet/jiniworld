@@ -5,7 +5,7 @@ var pFr = (function(window, document, undefined) {
     var slctrFeedInfo = "#feedInfo";
     var slctrTitle = "#title";
     var slctrCfg = "#cfg";
-    var slctrContent = "#content";
+    var slctrContent = "#contentfeed";
     var slctrclassContentEntry = ".entry-content";
     var slctrSaveButton = "#savebutton";
     var slctrOPMLButton = "#opmlimport";
@@ -158,8 +158,8 @@ var pFr = (function(window, document, undefined) {
              NoisyImageDataUrl="url(" + canvas.toDataURL("image/png") + ")";
             $('html').css('backgroundImage', NoisyImageDataUrl);
             return true;
-            
-}
+    }
+    
     function applyColor() {
         var Color = (Configuration.Configuration.ThemeColor !== undefined) ? (Configuration.Configuration.ThemeColor) : '#FBFBFB';
         $('html').css('background', Color);
@@ -209,7 +209,7 @@ var pFr = (function(window, document, undefined) {
         $('body').css('font-family',fontfamily)
     }
     function applyWidth(){
-        var dwidth=(window.innerWidth-200);
+        var dwidth=(window.innerWidth);
         Configuration.Configuration.Width =(Configuration.Configuration.Width !== undefined) ? (Configuration.Configuration.Width):dwidth;
         var width = 0;
         if(!isConfigLoadedFromStrorage){
@@ -382,9 +382,9 @@ var pFr = (function(window, document, undefined) {
             }
             var count = (AllFeedItems.length - ReadItemCountInThisSession);
             if(!showAllFlag){
-                $('title').html('(' + count + ')PurpleGene Feed Reader');    
+                $('title').html('(' + count + ')Jini Feed Reader');    
             }else{
-                $('title').html('(All)PurpleGene Feed Reader');    
+                $('title').html('(All)Jini Feed Reader');    
             }
             
         }
@@ -503,7 +503,8 @@ var pFr = (function(window, document, undefined) {
         }
         
     }
-/*
+    
+    /*
         We do not want user to accidently delete everything and save! :P
     */
 
@@ -673,9 +674,9 @@ var pFr = (function(window, document, undefined) {
         $(slctrContent).html(AllFeedItems[curFeed].content);
          
          if(isToRemoveFormatting()){
-            $('#content *').removeAttr("style");
-            $('#content font').removeAttr("size");
-            $('#content font').removeAttr("color");    
+            $('#contentfeed *').removeAttr("style");
+            $('#contentfeed font').removeAttr("size");
+            $('#contentfeed font').removeAttr("color");    
         }
         curFeedItem = AllFeedItems[curFeed];
         setALlLinksToOpenInNewWindow();
@@ -750,7 +751,7 @@ var pFr = (function(window, document, undefined) {
             }
             var meInfo = feedSource + ' ' + feedPubDate;
             if (content.length < 3) {
-                content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id sem dolor.';
+                content = 'Simple Dummy text.';
             }
             var spItem = $('<div>');
             spItem.addClass('spitem');

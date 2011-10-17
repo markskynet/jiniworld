@@ -314,6 +314,17 @@ footer section a:hover {
 
 /* content and sidebar layout */
 
+	
+#contentfeed {
+/* 	margin: 10px 0 0 10px; */
+/* 	padding: 10px 15px; */
+/* 	background-color: #d6a965; */
+	
+/* 	curved border radius */
+/* 	-moz-border-radius: 10px; */
+/* 	-webkit-border-radius: 10px; */
+	}
+
 #innercontent {
 	float: left; 
 	width: 610px; 
@@ -385,3 +396,4 @@ aside section ul li a:hover {
 	text-decoration: underline;
 	color: #fff;
 	}
+
