@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>My World</title>
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+	<script type="text/javascript" charset="utf-8" src="js/jquery-latest.js"></script>
+	<script src="js/modernizr-1.6.min.js"></script>
+    <script type="text/javascript" src="js/equalcolumns.js"></script>
+    <script type="text/javascript" src="js/bwH5LS.js"></script>
+    <script type="text/javascript" src="js/checkuser.js"></script>
+	<script type="text/javascript" src="js/jscolor.js"></script>
+	<script type="text/javascript" src="js/html5preview.js"></script>
+</head>
+<body>
+
+	<header>
+		<h1>My World</h1>
+	</header>
+	<nav>
+		<ul>
+			<li class="selected"><a href="home.html">Home</a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li class="selected"><a href="login.html?reset=true">Logout<script type="text/javascript">printUserName();</script></a></li>
+		</ul>
+	</nav>
+	<section id="intro">
+		<header>
+			<h2>Even Impossible Says I'm Possible :D</h2>
+		</header>
+		<p></p>
+		<canvas id="map" ></canvas>
+	</section>
+	
+	<div id="innercontent">
+		 <canvas id="canvasOne" width="500" height="200">
+			 Your browser does not support HTML 5 Canvas. 
+		</canvas>
+		<form>
+			  Text: <input id="textBox" placeholder="your text" />
+			  <br> 
+			  Text Font: <select id="textFont">
+			  <option value="serif">serif</option>
+			  <option value="sans-serif">sans-serif</option>
+			  <option value="cursive">cursive</option>
+			  <option value="fantasy">fantasy</option>
+			  <option value="monospace">monospace</option>
+			  </select>
+			  <br>
+			  Font Weight:
+			 <select id="fontWeight">
+			 <option value="normal">normal</option>
+			 <option value="bold">bold</option>
+			 <option value="bolder">bolder</option>
+			 <option value="lighter">lighter</option>
+			 </select>
+			 <br>
+			 Font Style:
+			 <select id="fontStyle">
+			 <option value="normal">normal</option>
+			 <option value="italic">italic</option>
+			 <option value="oblique">oblique</option>
+			 </select>
+			 <br>  
+			  Text Size: <input type="range" id="textSize"
+			       min="0"
+			       max="200"
+			       step="1"
+			       value="50"/> 
+			  <br>
+			  
+			  Fill Type : <select id="fillType">
+			  <option value="colorFill">Color Fill</option>
+			  <option value="linearGradient">Linear Gradient</option>
+			  <option value="radialGradient">Radial Gradient</option>
+			  <option value="pattern">pattern</option>
+			  </select>
+			  <br>
+			  Text Color: <input class="color" id="textFillColor" value="FF0000"/> 
+			  <br>
+			  Text Color 2: <input class="color" id="textFillColor2" value ="000000"/> 
+			  <br>
+			  
+			  Fill Or Stroke : <select id="fillOrStroke">
+			  <option value="fill">fill</option>
+			  <option value="stroke">stroke</option>
+			  <option value="both">both</option>
+			  </select>
+			  <br>
+			  Text Baseline <select id="textBaseline">
+			  <option value="middle">middle</option>
+			  <option value="top">top</option>
+			  <option value="hanging">hanging</option>
+			  <option value="alphabetic">alphabetic</option>
+			  <option value="ideographic">ideographic</option>
+			  <option value="bottom">bottom</option>
+			  </select>
+			  <br>
+			  Text Align <select id="textAlign">
+			  <option value="center">center</option>
+			  <option value="start">start</option>
+			  <option value="end">end</option>
+			  <option value="left">left</option>
+			  <option value="right">right</option>
+			  </select>
+			  <br>
+			 Alpha : <input type="range" id="textAlpha"
+			       min="0.0"
+			       max="1.0"
+			       step="0.01"
+			       value="1.0"/>
+			 <br>      
+			 Shadow X:<input type="range" id="shadowX"
+			       min="-100"
+			       max="100"
+			       step="1"
+			       value="1"/>
+			<br>
+			Shadow Y:<input type="range" id="shadowY"
+			       min="-100"
+			       max="100"
+			       step="1"
+			       value="1"/>
+			  <br>
+			Shadow Blur: <input type="range" id="shadowBlur"
+			       min="1"
+			       max="100"
+			       step="1"
+			       value="1" /> 
+			<br>
+			Shadow Color: <input class="color" id="shadowColor" value="707070"/> 
+			  <br>
+			  
+			Canvas Width:  <input type="range" id="canvasWidth"
+			       min="0"
+			       max="1000"
+			       step="1"
+			       value="500"/>
+			 <br>      
+			  
+			Canvas Height:
+			  <input type="range" id="canvasHeight"
+			       min="0"
+			       max="1000"
+			       step="1"
+			       value="300"/>
+			  <br>
+			  
+			Canvas Style Width:  <input type="range" id="canvasStyleWidth"
+			       min="0"
+			       max="1000"
+			       step="1"
+			       value="500"/>
+			 <br>      
+			  
+			Canvas Style Height:
+			  <input type="range" id="canvasStyleHeight"
+			       min="0"
+			       max="1000"
+			       step="1"
+			       value="300"/>
+			  <br>      
+			 <input type="button" id="createImageData" value="Create Image Data">
+			 <br>
+			 
+			 <br>
+			 <textarea id="imageDataDisplay" rows=10 cols=30></textarea>
+		 </form>
+	</div>
+		
+	<aside>
+		<section>
+			<header>
+				<h3>Categories</h3>
+			</header>
+			<ul>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</section>
+	</aside>
+
+	<footer>
+	    <section>
+		    <h3>Left Stuff</h3>
+		    <p></p>
+		    <p>Next line here</p>
+	    </section>
+	    
+	    <section>
+		    <h3>Center Stuff</h3>
+		    <p></p>
+		    <p>Next line here</p>
+	    </section>
+	    
+	    <section>
+		    <h3>Right Stuff</h3>
+		    <p></p>
+		    <p></p>
+	    </section>
+	</footer>
+</body>
+<footer>
+    <script type="text/javascript" src="js/renderer2.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/spinningglobe.js"></script>  
+</footer>
+</html>
