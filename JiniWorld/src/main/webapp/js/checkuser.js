@@ -8,11 +8,12 @@ function isValidUserSession(){
 
 	userNameDisplay = getUserName();
  
-    var userName = sesStorage.getItem('userName');
+    var userName = getUserName();
     
     if(userName == null){
     	sesStorage.setItem('message','Welcome to Jini World. Please Login.');
     	var pagename = getPageName();
+    	sesStorage.setItem('autoredirect',pagename);
     	redirectURL(pagename,"login");
     }
 }

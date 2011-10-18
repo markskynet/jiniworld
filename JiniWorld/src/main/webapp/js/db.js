@@ -94,9 +94,16 @@
                         	var dbpassword = row.password;
                         	if(dbpassword == password){
                         		var dbusername = row.username;
-
+                        		
                                 sesStorage.setItem('userName',dbusername);
-                            	redirectURL("login","home");	
+                                var arPage = sesStorage.getItem('autoredirect');
+                                if(arPage){ 
+                                	redirectURL("login",arPage);
+                                	sesStorage.removeItem('autoredirect');
+                                }
+                                else{
+                                	redirectURL("login","home");	
+                                }
                         	}else{
                             	// user not available
                         		alert('Invalid Password');
