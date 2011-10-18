@@ -173,10 +173,10 @@ nav ul li.subscribe a {
 	
 #intro img {
 	position: absolute;
-	top: 0;
-	right: 0;
-	width: 653px;
-	height: 100%;
+	top: 45px;
+	left: 5px;
+	width: 42px;
+ 	height: 52px;
 	
 	/* curved border radius */
 	-moz-border-radius: 10px;
